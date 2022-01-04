@@ -148,6 +148,7 @@ function getStringsLength(arr) {
  *    [ 1, 'b', 'c'], 0, 'x'  => [ 'x', 1, 'b', 'c' ]
  */
 function insertItem(arr, item, index) {
+  // eslint-disable-next-line func-names
   Array.prototype.insert = function () {
     this.splice(index, 0, item);
   };
@@ -509,7 +510,7 @@ function getIdentityMatrix(n) {
  */
 function getIntervalArray(start, end) {
   const n = end - start + 1;
-  const arr2 = Array.from({ length: n }, (k) => k + start);
+  const arr2 = Array.from({ length: n }, (d, k) => k + start);
   return arr2;
 }
 
